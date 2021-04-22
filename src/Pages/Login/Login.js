@@ -24,7 +24,7 @@ function Login() {
   };
 
   const goToLogin = () => {
-    fetch(`${API}/users/signin`, {
+    fetch(`http://10.58.7.236:8000/users/signin`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
