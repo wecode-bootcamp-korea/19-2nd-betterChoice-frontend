@@ -1,0 +1,44 @@
+{
+  "results": {
+    "address": "대한민국 서울특별시 종로구 세종로 청와대로 1",
+    "hotel_image": [
+      "https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2208&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80",
+      "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3302&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2689&q=80"
+    ],
+    "hotel_name": "승찬님네 집",
+    "hotel_review_rate": 5.3333333333333,
+    "hotel_thumbnail_image": "https://github.com/jeewonn/betterchoice/blob/master/%EC%89%90%EB%9D%BC%ED%86%A4/IMG_4784.jpg?raw=true",
+    "latitude": "37.58738746884391400000",
+    "longitude": "127.05421593635842000000",
+    "room_type": [
+      {
+        "discount_price": 25000,
+        "image": "https://github.com/jeewonn/betterchoice/blob/master/%ED%95%98%EC%96%8F%ED%8A%B8%EB%A6%AC%EC%A0%A0%EC%8B%9C/IMG_5117.jpg?raw=true",
+        "original_price": 50000,
+        "remain": 10,
+        "room_name": "승찬님네 집 Tour",
+        "room_id": 1
+      },
+      {
+        "discount_price": 56000,
+        "image": "https://github.com/jeewonn/betterchoice/blob/master/%ED%95%98%EC%96%8F%ED%8A%B8%EB%A6%AC%EC%A0%A0%EC%8B%9C/IMG_5120.jpg?raw=true",
+        "original_price": 70000,
+        "remain": 10,
+        "room_name": "조식 포함 WITH 승찬님",
+        "room_id": 2
+      },
+      {
+        "discount_price": 100000,
+        "image": "https://github.com/jeewonn/betterchoice/blob/master/%ED%95%98%EC%96%8F%ED%8A%B8%EB%A6%AC%EC%A0%A0%EC%8B%9C/IMG_5123.jpg?raw=true",
+        "original_price": 100000,
+        "remain": 10,
+        "room_name": "스위트룸 ",
+        "room_id": 3
+      }
+    ],
+    "star": 1,
+    "id": 1
+  }
+}

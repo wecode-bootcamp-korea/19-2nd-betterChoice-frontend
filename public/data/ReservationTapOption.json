@@ -1,0 +1,28 @@
+{
+  "RESULT": [
+    {
+      "image": [
+        "//image.goodchoice.kr/resize_490x348/affiliate/2016/05/24/5743fc51c9d2b.jpg"
+      ],
+      "name": "슈페리어 트윈",
+      "price": 192400,
+      "discount_price": 70000
+    },
+    {
+      "image": [
+        "//image.goodchoice.kr/resize_490x348/affiliate/2016/05/24/5743fc51c9d2b.jpg"
+      ],
+      "name": "디럭스 패밀리 트윈",
+      "price": 226000,
+      "discount_price": 75000
+    },
+    {
+      "image": [
+        "//image.goodchoice.kr/resize_490x348/affiliate/2016/05/24/5743fc51c9d2b.jpg"
+      ],
+      "name": "디럭스 더블",
+      "price": 226000,
+      "discount_price": 95000
+    }
+  ]
+}
