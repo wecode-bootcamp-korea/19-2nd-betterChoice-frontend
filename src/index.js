@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './Routes';
-import GlobalStyle from './Styles/globalStyle';
+import GlobalStyle from './Styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
-import Theme from './Style/Theme';
+import Theme from './Styles/Theme';
 
 ReactDOM.render(
   <>
