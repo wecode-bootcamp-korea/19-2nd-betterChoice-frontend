@@ -18,12 +18,8 @@ const RoomDetail = () => {
     const id = params.id;
     const query = queryString.parse(location.search);
 
-    // 전달된 url의 id에 해당하는 내용을 fetch get 요청
-    //fetch GET API 최종: 'http://10.58.6.199:8000/hotels/1?check_in=2021-05-07&check_out=2021-05-08'
-    // 2021-05-07, 2021-05-08 추출해서 -> order -> order confirm에 보내야함
     fetch(
-      // `${API}/hotels/${id}?check_in=${query['check_in']}&check_out=${query['check_out']}`
-      `http://10.58.6.199:8000/hotels/1?check_in=2021-05-07&check_out=2021-05-08`
+      `${API}/hotels/${id}?check_in=${query['check_in']}&check_out=${query['check_out']}`
     )
       .then(res => res.json())
       .then(data => {
@@ -47,6 +43,4 @@ const RoomDetail = () => {
 
 export default RoomDetail;
 
-const Wrapper = styled.section`
-  height: 100%;
-`;
+const Wrapper = styled.section``;

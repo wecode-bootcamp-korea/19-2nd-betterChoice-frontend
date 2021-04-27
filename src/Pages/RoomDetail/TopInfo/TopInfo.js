@@ -53,13 +53,13 @@ const TopInfo = ({ data }) => {
 export default TopInfo;
 
 const EntireWrapper = styled.section`
-  margin: 80px auto;
+  margin: 120px auto 10px auto;
 `;
 
 const TopInfoWrapper = styled.div`
   max-width: 1000px;
   padding: 20px;
-  margin: 20px auto;
+  margin: 10px auto;
   display: flex;
   justify-content: space-between;
 `;

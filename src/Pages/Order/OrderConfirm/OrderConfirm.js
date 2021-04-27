@@ -62,7 +62,7 @@ export default OrderConfirm;
 
 const OrderConfirmWrapper = styled.div`
   max-width: 800px;
-  margin: 80px auto;
+  margin: 200px auto;
 
   #title {
     font-size: 20px;

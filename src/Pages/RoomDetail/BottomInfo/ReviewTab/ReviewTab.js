@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
+import { API } from '../../../../config';
 
 import styled from 'styled-components';
 import EachReview from './EachReview/EachReview';
@@ -15,9 +16,8 @@ const ReviewTab = () => {
 
   useEffect(() => {
     const { id } = params;
-    console.log({ id });
 
-    fetch(`http://10.58.7.236:8000/reviews/hotel/${id}`)
+    fetch(`${API}/reviews/hotel/${id}`)
       .then(res => res.json())
       .then(data => {
         setReviewData(data.RESULTS);
@@ -28,6 +28,8 @@ const ReviewTab = () => {
   const showReviewModal = () => {
     setIsModalOn(!isModalOn);
   };
+
+  console.log(reviewData);
 
   return (
     <ReviewTabWrapper>

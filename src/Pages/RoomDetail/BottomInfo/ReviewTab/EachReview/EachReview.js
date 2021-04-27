@@ -60,14 +60,16 @@ const EachReview = ({ review }) => {
             </>
           )}
         </IconContainer>
-        <span className="rate"> {rate}</span>
+        <span className="rate"> {parseFloat(rate).toFixed(1)}</span>
         <div className="uploader">{nickname}</div>
-        <ImgWrapper isImgUploaded={image_url}>
-          {image_url &&
-            image_url.map(img => {
+        {image_url.length !== 0 && (
+          <ImgWrapper isImgUploaded={image_url}>
+            {image_url.map(img => {
               return <img key={img} src={img} alt="review img" />;
             })}
-        </ImgWrapper>
+          </ImgWrapper>
+        )}
+
         <p className="contents">{content}</p>
         <div className="dates_passed">작성일자 : {created_at}</div>
       </ContentsContainer>
