@@ -6,8 +6,7 @@ const Option = ({ option, hotelName, checkInDate, checkOutDate }) => {
   const { room_name, discount_price, original_price, image, remain } = option;
   const history = useHistory();
 
-  // 예약하기 클릭 시 예약페이지로 이동 ('/order')하면서
-  // Option컴포넌트에 있는 것 중 Order로 넘어가야하는 값들을 넘겨줄 수 있음
+  // 예약하기 클릭 시 예약페이지로 이동 ('/order')
   const goToOrder = () => {
     history.push({
       pathname: '/order',
@@ -38,7 +37,6 @@ const Option = ({ option, hotelName, checkInDate, checkOutDate }) => {
             <span className="discount_price">
               {discount_price.toLocaleString()}원
             </span>
-            {/* <div>{remain}개</div> */}
           </div>
         </div>
         <button className="reserv_btn" onClick={goToOrder}>

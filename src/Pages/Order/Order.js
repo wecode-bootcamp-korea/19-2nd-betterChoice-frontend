@@ -28,8 +28,6 @@ const Order = ({}) => {
     setPhoneNumber(e.target.value);
   };
 
-  // 예약하기 클릭 시 fetch POST 통신
-  // alert창으로 예약성공 날려주고 database에 예약 내역 저장 + 예약내역 페이지로 이동
   const makeOrder = () => {
     const Authorization = localStorage.getItem('ACCESS_TOKEN');
 
@@ -111,12 +109,10 @@ const Order = ({}) => {
         </div>
         <div className="check_in">
           <div className="title">체크인</div>
-          {/* check_in */}
           <div>{check_in}</div>
         </div>
         <div className="check_out">
           <div className="title">체크아웃</div>
-          {/* check_out */}
           <div>{check_out}</div>
         </div>
         <div className="total_price">
@@ -154,7 +150,7 @@ const OrderWrapper = styled.div`
   justify-content: space-between;
   max-width: 800px;
   padding: 20px;
-  margin: 80px auto;
+  margin: 200px auto;
 `;
 
 const LeftSide = styled.div`

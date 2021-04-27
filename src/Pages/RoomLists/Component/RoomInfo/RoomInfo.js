@@ -52,7 +52,7 @@ const RoomInfo = ({ roomInfoArr }) => {
             } = data;
 
             return (
-              <RoomLists key={id} onClick={goToRoomDetail}>
+              <RoomLists key={id} onClick={() => goToRoomDetail(id)}>
                 <RoomImg>
                   <img src={thumbnail_image} alt="roomImg" />
                 </RoomImg>

@@ -9,6 +9,9 @@ import { API } from '../../../../../config';
 
 const PostReview = ({ setReviewData, setIsModalOn }) => {
   const history = useHistory();
+  const params = useParams();
+  const id = params.id;
+  console.log(id);
 
   const [imgBase64, setImgBase64] = useState(''); // 파일 base64
   const [imgFile, setImgFile] = useState(null); //파일
@@ -55,14 +58,9 @@ const PostReview = ({ setReviewData, setIsModalOn }) => {
     fd.append('rate', reviewRate);
     fd.append('content', reviewDesc);
 
-    //fd 콘솔 확인 방법
-    for (var pair of fd.entries()) {
-      console.log(pair[1]);
-    }
-
     const Authorization = localStorage.getItem('ACCESS_TOKEN');
 
-    fetch(`http://10.58.7.236:8000/reviews/hotel/1`, {
+    fetch(`${API}/reviews/hotel/${id}`, {
       method: 'POST',
       headers: {
         Authorization: Authorization,
@@ -71,14 +69,14 @@ const PostReview = ({ setReviewData, setIsModalOn }) => {
     })
       .then(response => response.json())
       .then(response => {
+        console.log(response);
+        console.log(response['MESSAGE'] !== 'SUCCESS');
         if (response['MESSAGE'] === 'SUCCESS') {
           alert('리뷰가 정상적으로 등록되었습니다.');
-          //setReviewData(response.RESULT);
           setIsModalOn(false);
         } else {
           alert('리뷰를 등록할 수 없는 사용자입니다.');
-          console.log(response);
-          //  history.push('/');
+          // history.push('/');
         }
       });
   };
@@ -151,7 +149,7 @@ const MainWrapper = styled.div`
   width: 600px;
   height: auto;
   padding: 20px;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 100%);
   background-color: #fff;
   border-radius: 16px;
 `;
