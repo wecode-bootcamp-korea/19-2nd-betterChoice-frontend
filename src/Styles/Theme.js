@@ -12,6 +12,7 @@ const Theme = {
   middleGray: 'rgba(0,0,0,0.38)',
   bgGray: '#FCFCFC',
   borderGray: '#EBEBEB',
+  boxGray: '#DBDBDB',
   fiveStars: '#482069',
   fourStars: '#C9469F',
   threeStars: '#F28D3C',

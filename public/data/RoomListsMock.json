@@ -1,0 +1,26 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "시그니엘",
+      "address": "송파구, 서울특별시",
+      "rank": 5,
+      "stars": 9,
+      "status": "최고에요",
+      "price": 80000,
+      "discount_price": 56000,
+      "image": "https://cf.bstatic.com/xdata/images/hotel/square200/107527439.webp?k=62ba5d5f1fcc3e8d283bbfec7dede66488f1edcf419f2aef17bdcacc81f56513&o="
+    },
+    {
+      "id": 2,
+      "name": "인터컨티넨탈 서울",
+      "address": "강남구, 서울특별시",
+      "rank": 4,
+      "stars": 7,
+      "status": "좋아요",
+      "price": 120000,
+      "discount_price": 80000,
+      "image": "https://cf.bstatic.com/xdata/images/hotel/square200/12281600.webp?k=7115f5ad78217d3dbd1083f3095237f99dfc1e87f81521dbeeec824a25a4de8b&o="
+    }
+  ]
+}

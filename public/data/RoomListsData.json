@@ -1,0 +1,38 @@
+{
+  "MESSAGE": "SUCCESS",
+  "results": [
+    {
+      "address": "서울 강남구 논현동 201-11",
+      "discount_price": 8000,
+      "hotel_review_rate": 9.666666,
+      "id": 1,
+      "location": "선릉",
+      "name": "더 디자이너스 리즈 강남 프리미어",
+      "original_price": 10000,
+      "star": 5,
+      "thumbnail_image": "https://image.goodchoice.kr/resize_490x348/affiliate/2016/05/24/5743fc51c9d2b.jpg"
+    },
+    {
+      "address": "서울 강남구 논현동 201-11",
+      "discount_price": 43000,
+      "hotel_review_rate": 7.333333,
+      "id": 2,
+      "location": "강남",
+      "name": "워커힐",
+      "original_price": 330000,
+      "star": 3,
+      "thumbnail_image": "https://image.goodchoice.kr/resize_490x348/affiliate/2016/05/24/5743fc51c9d2b.jpg"
+    },
+    {
+      "address": "서울 강남구 논현동 201-11",
+      "discount_price": 345000,
+      "hotel_review_rate": null,
+      "id": 3,
+      "location": "강남",
+      "name": "Hilton",
+      "original_price": 23523000,
+      "star": 4,
+      "thumbnail_image": "https://image.goodchoice.kr/resize_490x348/affiliate/2016/05/24/5743fc51c9d2b.jpg"
+    }
+  ]
+}
