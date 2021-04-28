@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import './daterangepicker.css';
-import moment from 'moment';
-import 'moment/locale/ko';
+// import moment from 'moment';
+// import 'moment/locale/ko';
 
 const Calendar = ({ startDate, endDate, handleDateChange }) => {
   const [focusedInput, setFocusedInput] = useState(null);
