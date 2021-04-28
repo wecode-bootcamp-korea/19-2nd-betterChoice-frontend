@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -20,7 +20,7 @@ function Login() {
 
   const history = useHistory();
   const goToSignUp = () => {
-    history.push({ pathname: '/join/signUp' });
+    history.push('/join/signUp');
   };
 
   const goToLogin = () => {
@@ -36,16 +36,10 @@ function Login() {
     })
       .then(res => res.json())
       .then(res => {
-        console.log('res확인하기');
-        console.log(res);
-        console.log();
         if (res['MESSAGE'] === 'SUCCESS') {
           alert('로그인 완료 :)');
-          localStorage.setItem(
-            'ACCESS_TOKEN',
-            JSON.stringify(res['ACCESS_TOKEN'])
-          );
-          localStorage.setItem('NICKNAME', JSON.stringify(res['NICKNAME']));
+          localStorage.setItem('ACCESS_TOKEN', res['ACCESS_TOKEN']);
+          localStorage.setItem('NICKNAME', res['NICKNAME']);
           history.push('/');
         }
         if (res['MESSAGE'] === 'KEY_ERROR') {
@@ -81,8 +75,8 @@ function Login() {
         })
           .then(res => res.json())
           .then(res => {
-            console.log(res);
-            window.localStorage.setItem('access_token', res.TOKEN);
+            localStorage.setItem('ACCESS_TOKEN', res.TOKEN);
+            localStorage.setItem('NICKNAME', res.NICKNAME);
             history.push('/');
           });
       },
@@ -91,6 +85,17 @@ function Login() {
       },
     });
   }
+
+  useEffect(() => {
+    return sendUnlink();
+  }, []);
+  const sendUnlink = () => {
+    window.Kakao.API.request({
+      url: '/v1/user/unlink',
+      success: function (response) {},
+      fail: function (error) {},
+    });
+  };
 
   return (
     <Wrapper>
@@ -173,7 +178,6 @@ const Divide = styled.p`
     background: rgba(0, 0, 0, 0.09);
   }
 `;
-// ss
 const InputDiv = styled.div`
   display: flex;
   flex-direction: column;
