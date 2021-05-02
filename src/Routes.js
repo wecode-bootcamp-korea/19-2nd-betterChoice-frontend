@@ -7,7 +7,7 @@ import Identify from './Pages/SignUp/Identify';
 import SignUp from './Pages/SignUp/SignUp';
 import TopButton from './Components/TopButton/TopButton';
 import RoomLists from './Pages/RoomLists/RoomLists';
-// import RoomDetail from './Page/RoomDetail/RoomDetail';
+import RoomDetail from './Pages/RoomDetail/RoomDetail';
 
 const join = window.location.pathname.includes('/join');
 const login = window.location.pathname.includes('/login');
@@ -22,7 +22,8 @@ const Routes = () => {
         <Route exact path="/join/signup" component={SignUp} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/roomlists" component={RoomLists} />
-        {/* <Route exact path="/room/detail/:id" component={RoomDetail} /> */}
+        <Route exact path="/roomlists" component={RoomLists} />
+        <Route exact path="/room/detail/:id" component={RoomDetail} />
       </Switch>
       {!(join || login) && <TopButton />}
     </Router>

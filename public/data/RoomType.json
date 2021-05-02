@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "category": "호텔",
+      "image_url": "https://i.ibb.co/NW5sQsR/hotel.png",
+      "location": "강남"
+    },
+    {
+      "category": "모텔",
+      "image_url": "https://i.ibb.co/nbWMR62/motel.png",
+      "location": "역삼"
+    },
+    {
+      "category": "리조트",
+      "image_url": "https://i.ibb.co/SQjPmhN/resort.png",
+      "location": "삼성"
+    },
+    {
+      "category": "글램핑",
+      "image_url": "https://i.ibb.co/27Y9RDk/glamping.png",
+      "location": "신사"
+    },
+    {
+      "category": "펜션",
+      "image_url": "https://i.ibb.co/FDxCrVD/pension.png",
+      "location": "청담"
+    }
+  ]
+}

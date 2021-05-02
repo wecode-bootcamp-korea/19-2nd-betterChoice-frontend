@@ -17,7 +17,6 @@ const CountNumbox = ({
   const closeToggleBox = () => {
     setIsToggleBox(false);
   };
-
   return (
     <>
       <SearchBox>
@@ -61,21 +60,21 @@ const SearchBox = styled.div`
   width: 300px;
   height: 50px;
   margin-right: 15px;
-  background-color: ${props => props.theme.white};
-  border: 1px solid ${props => props.theme.boxGray};
+  background-color: ${({ theme }) => theme.white};
+  border: 1px solid ${({ theme }) => theme.boxGray};
   border-radius: 5px;
   font-size: 16px;
   padding-left: 15px;
   cursor: pointer;
   .fas {
     margin-right: 10px;
-    color: ${props => props.theme.mainColor};
+    color: ${({ theme }) => theme.mainColor};
   }
   span {
     display: inline-block;
     width: 220px;
     font-size: 14px;
-    color: ${props => props.theme.fontGray};
+    color: ${({ theme }) => theme.fontGray};
   }
   &:hover {
     border: 1.5px solid rgba(0, 0, 0, 0.1);
@@ -92,16 +91,16 @@ const SelectQty = styled.div`
   height: 240px;
   margin-top: 320px;
   padding: 20px;
-  background-color: ${props => props.theme.white};
-  border: 1px solid ${props => props.theme.boxGray};
+  background-color: ${({ theme }) => theme.white};
+  border: 1px solid ${({ theme }) => theme.boxGray};
   border-radius: 4px;
 `;
 
 const SelectAdultTitle = styled.div`
   margin: 0px 0px 30px;
   font-size: 14px;
-  font-weight: ${props => props.theme.fontWeightBold};
-  color: ${props => props.theme.fontGray};
+  font-weight: ${({ theme }) => theme.fontWeightBold};
+  color: ${({ theme }) => theme.fontGray};
 `;
 
 const SelectAdultNum = styled.div`
@@ -112,7 +111,7 @@ const SelectAdultNum = styled.div`
 
 const Title = styled.span`
   font-size: 16px;
-  color: ${props => props.theme.fontGray};
+  color: ${({ theme }) => theme.fontGray};
 `;
 
 const CountBtn = styled.div`
@@ -124,8 +123,8 @@ const CountBtn = styled.div`
     height: 34px;
     border-radius: 50%;
     text-align: center;
-    border: 1px solid ${props => props.theme.boxGray};
-    color: ${props => props.theme.mainColor};
+    border: 1px solid ${({ theme }) => theme.boxGray};
+    color: ${({ theme }) => theme.mainColor};
     font-size: 20px;
     margin: 0px 10px;
     cursor: pointer;
@@ -137,7 +136,7 @@ const UpdateBtn = styled.div`
   text-align: center;
   border-radius: 5px;
   color: white;
-  background-color: ${props => props.theme.mainColor};
+  background-color: ${({ theme }) => theme.mainColor};
   width: 80px;
   padding: 10px;
   left: 165px;
