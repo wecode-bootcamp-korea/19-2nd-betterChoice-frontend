@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Section from './component/Section';
 import { data } from './data';
 import { API } from '../../config';
+import Modal from './component/Modal';
 
 function SignUp() {
-  const history = useHistory();
-
   const [form, setForm] = useState({
     email: '',
     password: '',
     passwordCheck: '',
     nickname: '',
   });
+
+  const [modal, setModal] = useState(false);
+
+  const openModal = () => {
+    setModal(!modal);
+  };
 
   const validator = {
     email: email => email.includes('@' && '.com') && email.length > 8,
@@ -45,7 +50,7 @@ function SignUp() {
       .then(res => {
         console.log(res);
         if (res['MESSAGE'] === 'SUCCESS') {
-          history.push('/login');
+          openModal();
         }
         if (res['MESSAGE'] === 'INVALID_EMAIL') {
           alert('잘못 된 이메일 형식입니다.');
@@ -86,6 +91,7 @@ function SignUp() {
         <Button isActive={isAllValid} onClick={goToLogin} type="submit">
           가입하기
         </Button>
+        {modal && <Modal form={form} openModal={openModal} />}
       </Main>
     </Wrapper>
   );
