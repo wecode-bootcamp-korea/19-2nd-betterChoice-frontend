@@ -52,7 +52,12 @@ const RoomInfo = ({ roomInfoArr }) => {
             } = data;
 
             return (
-              <RoomLists key={id} onClick={() => goToRoomDetail(id)}>
+              <RoomLists
+                key={id}
+                onClick={() => {
+                  goToRoomDetail(id);
+                }}
+              >
                 <RoomImg>
                   <img src={thumbnail_image} alt="roomImg" />
                 </RoomImg>
@@ -108,12 +113,14 @@ const RoomInfo = ({ roomInfoArr }) => {
 
 export default withRouter(RoomInfo);
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  width: 1000px;
+`;
 
 const RoomLists = styled.div`
   position: relative;
   display: flex;
-  height: 250px;
+  height: 280px;
   margin-bottom: 20px;
   border: 1px solid ${({ theme }) => theme.boxGray};
   border-radius: 4px;
@@ -127,9 +134,8 @@ const RoomLists = styled.div`
 
 const RoomImg = styled.div`
   ${({ theme }) => theme.flexCenter}
-  height: 250px;
   img {
-    height: 250px;
+    height: 280px;
   }
 `;
 
@@ -139,13 +145,13 @@ const RoomDesc = styled.div`
 
 const Name = styled.li`
   margin: 10px 0;
-  font-size: ${({ theme }) => theme.fontSizeMedium};
+  font-size: 25px;
   font-weight: calc(${({ theme }) => theme.fontWeightBold}*0.7);
 `;
 
 const Address = styled.li`
   margin-bottom: 50px;
-  font-size: 13px;
+  font-size: 16px;
   color: ${({ theme }) => theme.middleGray};
 `;
 
@@ -161,8 +167,8 @@ const Star = styled.span`
 const ReviewRate = styled.span`
   display: inline-block;
   text-align: center;
-  width: 30px;
-  height: 23px;
+  width: 40px;
+  height: 25px;
   line-height: 23px;
   border-radius: 4px;
   margin-top: 10px;
@@ -176,7 +182,7 @@ const ReviewRate = styled.span`
 const ReviewStatus = styled.span`
   display: inline-block;
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 14px;
   color: ${({ theme }) => theme.fontGray};
 `;
 
@@ -196,5 +202,5 @@ const Price = styled.li`
 
 const DiscountPrice = styled.li`
   font-weight: ${({ theme }) => theme.fontWeightBold};
-  font-size: calc(${({ theme }) => theme.fontSizeMedium}*1.2);
+  font-size: calc(${({ theme }) => theme.fontSizeMedium}*1.3);
 `;

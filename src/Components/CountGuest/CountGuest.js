@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBed } from '@fortawesome/free-solid-svg-icons';
 
 const CountNumbox = ({
   adult,
@@ -21,7 +23,7 @@ const CountNumbox = ({
     <>
       <SearchBox>
         <div onClick={handleToggleBox}>
-          <i class="fas fa-bed"></i>
+          <FontAwesomeIcon icon={faBed} />
           <span>
             성인 {adult}명 / 객실 {room}개
           </span>
@@ -68,17 +70,19 @@ const SearchBox = styled.div`
   cursor: pointer;
   .fa-bed {
     margin-right: 10px;
+    font-size: 23px;
     color: ${({ theme }) => theme.mainColor};
   }
   .rightDown {
-      margin-left : 70px;
-      color: ${({ theme }) => theme.mainColor};
-      font-size :25px;
-    }
+    margin-left: 70px;
+    color: ${({ theme }) => theme.mainColor};
+    font-size: 25px;
   }
+
   span {
     display: inline-block;
     width: 220px;
+    margin-bottom: 10px;
     font-size: 20px;
     color: ${({ theme }) => theme.fontGray};
   }
@@ -104,7 +108,7 @@ const SelectQty = styled.div`
 
 const SelectAdultTitle = styled.div`
   margin: 0px 0px 30px;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: ${({ theme }) => theme.fontWeightBold};
   color: ${({ theme }) => theme.fontGray};
 `;
@@ -143,9 +147,9 @@ const UpdateBtn = styled.div`
   border-radius: 5px;
   color: white;
   background-color: ${({ theme }) => theme.mainColor};
-  width: 80px;
+  width: 100px;
   padding: 10px;
-  left: 165px;
-  font-size: 13px;
+  left: 190px;
+  font-size: 16px;
   cursor: pointer;
 `;

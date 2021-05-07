@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { API } from '../../../../config';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 const Location = ({ location, setLocation }) => {
@@ -26,8 +28,10 @@ const Location = ({ location, setLocation }) => {
     <>
       <LocationWrap onClick={handleToggleBox}>
         <SearchBox value={location} />
-        <i class="fas fa-map-marker-alt" />
-        <i className="fas fa-chevron-down rightDown" />
+        <IconBox>
+          <FontAwesomeIcon icon={faMapMarkerAlt} />
+          <i className="fas fa-chevron-down rightDown" />
+        </IconBox>
       </LocationWrap>
       <SelectLocation display={isToggleBox}>
         <Title>주변 인기 여행지</Title>
@@ -57,16 +61,24 @@ const LocationWrap = styled.div`
     position: absolute;
     top: 17px;
     left: 15px;
+    font-size: 25px;
+    color: ${props => props.theme.mainColor};
   }
   .rightDown {
     position: absolute;
     top: 15px;
     right: 40px;
-  }
-  i {
     font-size: 25px;
     color: ${props => props.theme.mainColor};
   }
+`;
+
+const IconBox = styled.span`
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  font-size: 20px;
+  color: ${props => props.theme.mainColor};
 `;
 
 const SearchBox = styled.input.attrs(props => ({
@@ -101,10 +113,10 @@ const SelectLocation = styled.div`
   position: absolute;
   display: ${({ display }) => (display ? 'flex' : 'none')};
   flex-direction: column;
-  width: 300px;
-  height: 250px;
-  left: 230px;
-  margin-top: 330px;
+  width: 400px;
+  height: 320px;
+  left: 320px;
+  margin-top: 400px;
   border: 1px solid ${({ theme }) => theme.boxGray};
   border-radius: 4px;
   background-color: ${({ theme }) => theme.white};
@@ -116,13 +128,14 @@ const Title = styled.span`
   padding-top: 20px;
   padding-left: 15px;
   font-weight: ${({ theme }) => theme.fontWeightBold};
-  font-size: 14px;
+  font-size: 20px;
   color: ${({ theme }) => theme.fontGray};
 `;
 
 const SelectLocationTitle = styled.div`
+  margin-top: 10px;
   padding: 10px;
-  font-size: 14px;
+  font-size: 18px;
   color: ${({ theme }) => theme.fontGray};
   i {
     margin-right: 10px;
