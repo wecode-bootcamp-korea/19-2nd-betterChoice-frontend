@@ -20,11 +20,11 @@ function Login() {
 
   const history = useHistory();
   const goToSignUp = () => {
-    history.push('/join/signUp');
+    history.push('/join/identify');
   };
 
   const goToLogin = () => {
-    fetch(`http://10.58.7.236:8000/users/signin`, {
+    fetch(`${API}/users/signin`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',

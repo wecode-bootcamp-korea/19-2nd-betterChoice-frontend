@@ -33,7 +33,7 @@ const Order = ({}) => {
   const makeOrder = () => {
     const Authorization = localStorage.getItem('ACCESS_TOKEN');
 
-    fetch(`http://10.58.6.224:8000/reservations`, {
+    fetch(`${API}/reservations`, {
       method: 'POST',
       headers: {
         Authorization: Authorization,
@@ -50,7 +50,7 @@ const Order = ({}) => {
       .then(response => response.json())
       .then(response => {
         if (response['MESSAGE'] === 'SUCCESS') {
-          history.push('/order-confirm');
+          history.push('/order/orderConfirm');
           alert('예약되었습니다.');
         } else {
           console.log(response);

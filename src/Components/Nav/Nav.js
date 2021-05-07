@@ -13,7 +13,7 @@ function Nav() {
   }, [nickName]);
 
   const goMyPage = () => {
-    history.push('/room/detail/:id');
+    history.push('/order/orderConfirm');
   };
   const goToMain = () => {
     history.push('/');

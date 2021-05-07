@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { API } from '../../../config';
 
 const OrderConfirm = ({}) => {
   const [orderList, setOrderList] = useState([]);
@@ -7,7 +8,7 @@ const OrderConfirm = ({}) => {
   useEffect(() => {
     const Authorization = localStorage.getItem('ACCESS_TOKEN');
 
-    fetch('http://10.58.6.224:8000/reservations', {
+    fetch(`${API}/reservations`, {
       headers: {
         Authorization: Authorization,
       },
