@@ -6,7 +6,6 @@ import Login from './Pages/Login/Login';
 import Identify from './Pages/SignUp/Identify';
 import SignUp from './Pages/SignUp/SignUp';
 import RoomLists from './Pages/RoomLists/RoomLists';
-// import RoomDetail from './Page/RoomDetail/RoomDetail';
 import RoomDetail from './Pages/RoomDetail/RoomDetail';
 import Order from './Pages/Order/Order';
 import OrderConfirm from './Pages/Order/OrderConfirm/OrderConfirm';
