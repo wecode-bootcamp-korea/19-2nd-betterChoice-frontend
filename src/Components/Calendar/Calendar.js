@@ -35,13 +35,13 @@ export default Calendar;
 const SearchBox = styled.div`
   display: flex;
   align-items: center;
-  width: 300px;
-  height: 50px;
+  width: 380px;
+  height: 60px;
   margin-right: 15px;
   background-color: ${({ theme }) => theme.white};
   border: 1px solid ${({ theme }) => theme.boxGray};
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
   padding-left: 15px;
   cursor: pointer;
   .fas {
@@ -51,7 +51,7 @@ const SearchBox = styled.div`
   span {
     display: inline-block;
     width: 220px;
-    font-size: 14px;
+    font-size: 20px;
     color: ${({ theme }) => theme.middleGray};
   }
   &:hover {
@@ -452,7 +452,7 @@ const DatePickerWrapper = styled.div`
     border: 0;
   }
   .DateInput_input {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 24px;
 

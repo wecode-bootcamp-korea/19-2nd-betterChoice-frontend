@@ -57,8 +57,8 @@ export default CountNumbox;
 const SearchBox = styled.div`
   display: flex;
   align-items: center;
-  width: 300px;
-  height: 50px;
+  width: 380px;
+  height: 60px;
   margin-right: 15px;
   background-color: ${({ theme }) => theme.white};
   border: 1px solid ${({ theme }) => theme.boxGray};
@@ -66,14 +66,20 @@ const SearchBox = styled.div`
   font-size: 16px;
   padding-left: 15px;
   cursor: pointer;
-  .fas {
+  .fa-bed {
     margin-right: 10px;
     color: ${({ theme }) => theme.mainColor};
+  }
+  .rightDown {
+      margin-left : 70px;
+      color: ${({ theme }) => theme.mainColor};
+      font-size :25px;
+    }
   }
   span {
     display: inline-block;
     width: 220px;
-    font-size: 14px;
+    font-size: 20px;
     color: ${({ theme }) => theme.fontGray};
   }
   &:hover {
@@ -87,9 +93,9 @@ const SelectQty = styled.div`
   position: absolute;
   display: ${props => (props.display ? 'flex' : 'none')};
   flex-direction: column;
-  width: 300px;
-  height: 240px;
-  margin-top: 320px;
+  width: 350px;
+  height: 260px;
+  margin-top: 340px;
   padding: 20px;
   background-color: ${({ theme }) => theme.white};
   border: 1px solid ${({ theme }) => theme.boxGray};

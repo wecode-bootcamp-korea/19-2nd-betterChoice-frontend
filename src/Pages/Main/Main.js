@@ -134,18 +134,18 @@ const MIN_ROOM_NUM = 1;
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  height: 80vh;
   background-image: url('https://images.unsplash.com/photo-1501117716987-c8c394bb29df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
   background-size: cover;
 `;
 
 const MainWrap = styled.div`
-  margin: 170px auto;
+  margin: 220px auto;
 `;
 
 const InfoWrap = styled.div`
-  height: 230px;
-  padding: 30px;
+  height: 290px;
+  padding: 70px;
   border: 1px solid ${({ theme }) => theme.boxGray};
   border-radius: 7px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
@@ -154,14 +154,14 @@ const InfoWrap = styled.div`
 
 const Header = styled.h1`
   margin-bottom: 2rem;
-  font-size: 1.9rem;
+  font-size: 2.3rem;
   font-weight: 600;
   color: ${({ theme }) => theme.white};
 `;
 
 const SearchWrap = styled.div`
   ${({ theme }) => theme.flexCenter};
-  margin-top: 15px;
+  margin-top: 20px;
 `;
 
 const SearchBtn = styled.div`
@@ -182,9 +182,9 @@ const RoomTypeWrap = styled.section`
 `;
 
 const SecondHeader = styled.header`
-  padding: 5px 130px;
+  padding: 10px 270px;
   margin-bottom: 30px;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 600;
   color: ${({ theme }) => theme.black};
 `;
@@ -195,8 +195,8 @@ const ImageBox = styled.div`
 `;
 
 const MainType = styled.div`
-  width: 510px;
-  height: 200px;
+  width: 610px;
+  height: 300px;
   margin-right: 20px;
   padding: 20px;
   background-image: url(${props => props.src});
@@ -208,8 +208,8 @@ const MainType = styled.div`
 `;
 
 const SubType = styled(MainType)`
-  width: 330px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   background-image: url(${props => props.src});
   background-size: cover;
 `;
@@ -218,14 +218,14 @@ const FooterBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-top: 100px;
+  margin-top: 50px;
 `;
 
 const Footer = styled.div`
   font-weight: ${({ theme }) => theme.fontWeightBold};
   margin: 10px 0;
-  font-size: 25px;
-  color: white;
+  font-size: 35px;
+  color: ${({ theme }) => theme.white};
 `;
 
 const IMAGES = [

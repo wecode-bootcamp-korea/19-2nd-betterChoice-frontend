@@ -64,7 +64,7 @@ const LocationWrap = styled.div`
     right: 40px;
   }
   i {
-    margin-right: -10px;
+    font-size: 25px;
     color: ${props => props.theme.mainColor};
   }
 `;
@@ -75,9 +75,9 @@ const SearchBox = styled.input.attrs(props => ({
 }))`
   display: flex;
   align-items: center;
-  width: 300px;
-  height: 50px;
-  margin-right: 15px;
+  width: 380px;
+  height: 60px;
+  margin-right: 20px;
   padding-left: 15px;
   border: 1px solid ${({ theme }) => theme.boxGray};
   border-radius: 5px;
@@ -86,9 +86,9 @@ const SearchBox = styled.input.attrs(props => ({
   font-size: 16px;
   cursor: pointer;
   display: ${({ placeholder }) => placeholder || 'inline - block'};
-  font-size: ${({ text }) => text || '14px'};
+  font-size: ${({ text }) => text || '20px'};
   color: ${({ text }) => text || `${({ theme }) => theme.fontGray}`};
-  text-indent: ${({ text }) => text || '20px'};
+  text-indent: ${({ text }) => text || '30px'};
 
   &:hover {
     border: 1.5px solid rgba(0, 0, 0, 0.1);
