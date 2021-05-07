@@ -45,7 +45,9 @@ function Nav() {
             <Login onClick={LogIn}>로그인</Login>
           )}
           {localStorage.getItem('ACCESS_TOKEN') && (
-            <NickName>{nickName} 님</NickName>
+            <NickName>
+              <span>{nickName}</span> 님
+            </NickName>
           )}
         </MyPage>
       </Icons>
@@ -57,6 +59,7 @@ export default Nav;
 
 const Wrapper = styled.section`
   position: fixed;
+  z-index: 999;
   width: 100vw;
   height: 96px;
   padding: auto;
@@ -97,4 +100,7 @@ const Login = styled.div`
 const NickName = styled.div`
   padding: 20px;
   cursor: default;
+  span {
+    font-weight: bolder;
+  }
 `;
