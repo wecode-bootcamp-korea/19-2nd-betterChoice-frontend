@@ -51,18 +51,20 @@ const ImageBox = styled.div`
 
 const Image = styled.img`
   display: block;
-  width: 50px;
-  height: 50px;
-  margin-right: 50px;
+  width: 80px;
+  height: 80px;
+  margin-right: 60px;
   cursor: pointer;
 `;
 
 const Title = styled.span`
   color: ${({ color, theme }) => (color ? theme.mainColor : '#4d4d4d')};
   display: inline-block;
-  width: 50px;
-  font-size: 14px;
+  justify-content: center;
+  width: 80px;
+  font-size: 18px;
   font-weight: ${({ color, theme }) => color && theme.fontWeightBold};
   text-align: center;
   margin-top: 10px;
+  margin-bottom: 30px;
 `;
