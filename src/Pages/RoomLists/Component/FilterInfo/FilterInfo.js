@@ -34,7 +34,9 @@ export default FilterInfo;
 const FILTER_CATEGORY = ['추천순', '평점순', '낮은 가격순', '높은 가격순'];
 
 const Wrapper = styled.section`
-  margin: 5px auto;
+  margin-top: 180px;
+  display: flex;
+  justify-content: center;
 `;
 
 const Category = styled.ul`
@@ -44,8 +46,8 @@ const Category = styled.ul`
 `;
 
 const FilterCategory = styled.li`
-  width: 200px;
-  height: 50px;
+  width: 250px;
+  height: 60px;
   text-align: center;
   line-height: 50px;
   border: 1px solid ${({ theme }) => theme.boxGray};
@@ -60,11 +62,12 @@ const FilterCategory = styled.li`
 `;
 
 const SearchResult = styled.span`
-  margin-right: 180px;
+  margin-right: 220px;
   font-size: ${({ theme }) => theme.fontSizeMedium};
   font-weight: ${({ theme }) => theme.fontWeightBold};
   color: #333;
   span {
-    font-size: calc(${({ theme }) => theme.fontSizeMedium}*1.8);
+    padding-left: 70px;
+    font-size: calc(${({ theme }) => theme.fontSizeLarge}*1.2);
   }
 `;

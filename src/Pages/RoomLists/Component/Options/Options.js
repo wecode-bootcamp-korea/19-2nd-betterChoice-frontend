@@ -152,8 +152,8 @@ const HotelType = [
 const Wrapper = styled.aside`
   position: sticky;
   top: 0;
-  width: 350px;
-  height: 650px;
+  width: 430px;
+  height: 670px;
   margin-right: 30px;
   padding: 20px;
   border: 1px solid ${({ theme }) => theme.boxGray};
@@ -161,6 +161,7 @@ const Wrapper = styled.aside`
 `;
 
 const Title = styled.div`
+  font-size: 20px;
   margin-bottom: 18px;
   font-weight: 500;
 `;
@@ -190,14 +191,14 @@ const CheckBox = styled.input`
 const Label = styled.label`
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 18px;
   padding: 7px 0;
   color: ${({ theme }) => theme.fontGray};
 `;
 
 const Button = styled.button`
   margin-top: 30px;
-  width: 300px;
+  width: 380px;
   height: 50px;
   border-radius: 5px;
   outline: none;

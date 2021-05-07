@@ -77,12 +77,11 @@ const SORTING_CATEGORY = ['1', '2', '3', '4'];
 const RoomlistsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 800vh;
-  margin: 200px auto;
+  margin: 0 auto;
 `;
 const ListsWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  margin-left: 250px;
 `;
 
 const RoomInfoWrap = styled.div`

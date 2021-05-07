@@ -4,13 +4,17 @@ import styled from 'styled-components';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import 'moment/locale/ko';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendar } from '@fortawesome/free-solid-svg-icons';
 
 const Calendar = ({ start, end, handleDateChange }) => {
   const [focusedInput, setFocusedInput] = useState(null);
 
   return (
     <SearchBox>
-      <i className="fas fa-calendar" />
+      <IconBox>
+        <FontAwesomeIcon icon={faCalendar} />{' '}
+      </IconBox>
       <DatePickerWrapper>
         <DateRangePicker
           startDatePlaceholderText="체크인"
@@ -44,10 +48,6 @@ const SearchBox = styled.div`
   font-size: 20px;
   padding-left: 15px;
   cursor: pointer;
-  .fas {
-    margin-right: 10px;
-    color: ${({ theme }) => theme.mainColor};
-  }
   span {
     display: inline-block;
     width: 220px;
@@ -59,6 +59,11 @@ const SearchBox = styled.div`
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.3s ease-in-out;
   }
+`;
+
+const IconBox = styled.div`
+  margin-right: 10px;
+  color: ${({ theme }) => theme.mainColor};
 `;
 
 const DatePickerWrapper = styled.div`
@@ -438,7 +443,7 @@ const DatePickerWrapper = styled.div`
   }
   .DateInput {
     background: #fff;
-    width: 103px;
+    width: 134px;
   }
   .DateInput__small {
     width: 97px;
@@ -455,12 +460,11 @@ const DatePickerWrapper = styled.div`
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
-
     color: rgb(52, 58, 64);
     background-color: #fff;
     outline: none;
-    width: 100%;
-    padding: 10px 5px 10px;
+    width: 200px;
+    padding: 10px 0;
   }
   ::-webkit-input-placeholder {
     color: rgb(52, 58, 64);
@@ -541,7 +545,7 @@ const DatePickerWrapper = styled.div`
   }
   .DateRangePickerInput_arrow_svg {
     position: absolute;
-    left: 80px;
+    left: 110px;
     top: 10px;
     fill: rgb(52, 58, 64);
     height: 22px;
