@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
+import { useEffect } from 'react/cjs/react.development';
 
 function Nav() {
   const history = useHistory();
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
   const [nickName, setNickName] = useState('');
+  const [isToken, setIsToken] = useState(false);
 
   useState(() => {
     if (localStorage.getItem('NICKNAME')) {
@@ -15,10 +19,10 @@ function Nav() {
   const goMyPage = () => {
     history.push('/order/orderConfirm');
   };
+
   const goToMain = () => {
     history.push('/');
   };
-  const [isToken, setIsToken] = useState(false);
 
   const LogIn = () => {
     setIsToken(!isToken);
@@ -31,8 +35,16 @@ function Nav() {
     localStorage.removeItem('NICKNAME');
   };
 
+  useEffect(() => {
+    const join = location.pathname.includes('/join');
+    const login = location.pathname.includes('/login');
+    const isNavOpen = !(join || login);
+
+    setIsOpen(isNavOpen);
+  }, [location.pathname]);
+
   return (
-    <Wrapper>
+    <Wrapper isOpen={isOpen}>
       <Icons>
         <Logo onClick={goToMain}>야,여기어때</Logo>
         <MyPage>
@@ -58,6 +70,7 @@ function Nav() {
 export default Nav;
 
 const Wrapper = styled.section`
+  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
   position: fixed;
   z-index: 999;
   width: 100vw;
