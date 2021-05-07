@@ -10,13 +10,10 @@ import RoomDetail from './Pages/RoomDetail/RoomDetail';
 import Order from './Pages/Order/Order';
 import OrderConfirm from './Pages/Order/OrderConfirm/OrderConfirm';
 
-const join = window.location.pathname.includes('/join');
-const login = window.location.pathname.includes('/login');
-
 const Routes = () => {
   return (
     <Router>
-      {!(join || login) && <Nav />}
+      <Nav />
       <Switch>
         <Route exact path="/" component={Main} />
         <Route exact path="/join/identify" component={Identify} />
