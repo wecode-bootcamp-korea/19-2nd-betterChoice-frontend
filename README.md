@@ -28,7 +28,14 @@ React를 사용한 '여기어때' 웹사이트를 모티브로 한 프로젝트
 
 - BackEnd  
 
-- Python, Django, bcrypt, pyjwt, unittest, MySQL, AqueryTool, AWS EC2, AWS RDS, AWS S3, Docker
+  ![Python](https://img.shields.io/badge/-Python-376FA0)  
+  ![Django](https://img.shields.io/badge/-Django-043829)   
+  ![Bcrypt](https://img.shields.io/badge/-Bcrypt-2A334C)  
+  ![PyJWT](https://img.shields.io/badge/-PyJWT-black)  
+  ![MySQL](https://img.shields.io/badge/-MySQL-DD8A00)  
+  ![AqeuryTool](https://img.shields.io/badge/-AqeuryTool-6A9CA7)  
+  ![S3](https://img.shields.io/badge/-S3-DA5041)
+  unittest, AWS EC2, AWS RDS, AWSDocker
   
 ## 협업 도구
 
@@ -45,6 +52,7 @@ React를 사용한 '여기어때' 웹사이트를 모티브로 한 프로젝트
 
 ### Nav Bar
 - 레이아웃/소셜 로그인 시(토큰 유무에 따른) nav bar 카카오톡 이름(닉네임), 예약내역 표시
+<br>
 
 **박단비** <br>
 ### 메인 페이지
@@ -55,6 +63,7 @@ React를 사용한 '여기어때' 웹사이트를 모티브로 한 프로젝트
 - 필터링된 호텔 리스트 추천순, 평점순, 가격순, 성급별 sorting 
 - 리스트 페이지 호텔별 성급, 리뷰에 따른 코멘트 라벨 컴포넌트화 
 - 날짜, 인원 재검색에 따른 결과 표시 
+<br>
 
 **박성은** <br>
 ### 숙박 상세 페이지
