@@ -30,7 +30,6 @@ const Location = ({ location, setLocation }) => {
         <SearchBox value={location} />
         <IconBox>
           <FontAwesomeIcon icon={faMapMarkerAlt} />
-          <i className="fas fa-chevron-down rightDown" />
         </IconBox>
       </LocationWrap>
       <SelectLocation display={isToggleBox}>
@@ -44,7 +43,9 @@ const Location = ({ location, setLocation }) => {
               }}
               value={category.location[index]}
             >
-              <i class="fas fa-map-marker-alt"></i>
+              <Icon>
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
+              </Icon>
               {category.location}
             </SelectLocationTitle>
           ))}
@@ -57,27 +58,13 @@ export default Location;
 
 const LocationWrap = styled.div`
   position: relative;
-  .fa-map-marker-alt {
-    position: absolute;
-    top: 17px;
-    left: 15px;
-    font-size: 25px;
-    color: ${props => props.theme.mainColor};
-  }
-  .rightDown {
-    position: absolute;
-    top: 15px;
-    right: 40px;
-    font-size: 25px;
-    color: ${props => props.theme.mainColor};
-  }
 `;
 
 const IconBox = styled.span`
   position: absolute;
-  top: 3px;
-  left: 5px;
-  font-size: 20px;
+  top: 15px;
+  left: 15px;
+  font-size: 25px;
   color: ${props => props.theme.mainColor};
 `;
 
@@ -137,11 +124,12 @@ const SelectLocationTitle = styled.div`
   padding: 10px;
   font-size: 18px;
   color: ${({ theme }) => theme.fontGray};
-  i {
-    margin-right: 10px;
-    color: ${({ theme }) => theme.mainColor};
-  }
   &:hover {
     background-color: rgba(0, 0, 0, 0.05);
   }
+`;
+
+const Icon = styled.span`
+  margin-right: 10px;
+  color: ${({ theme }) => theme.mainColor};
 `;

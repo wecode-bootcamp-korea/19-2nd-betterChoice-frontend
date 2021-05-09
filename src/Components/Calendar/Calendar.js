@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { DateRangePicker } from 'react-dates';
-import styled from 'styled-components';
-import 'react-dates/initialize';
-import 'react-dates/lib/css/_datepicker.css';
-import 'moment/locale/ko';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+import styled from 'styled-components';
+import 'moment/locale/ko';
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
 
 const Calendar = ({ start, end, handleDateChange }) => {
   const [focusedInput, setFocusedInput] = useState(null);
@@ -13,7 +13,7 @@ const Calendar = ({ start, end, handleDateChange }) => {
   return (
     <SearchBox>
       <IconBox>
-        <FontAwesomeIcon icon={faCalendar} />{' '}
+        <FontAwesomeIcon icon={faCalendar} />
       </IconBox>
       <DatePickerWrapper>
         <DateRangePicker

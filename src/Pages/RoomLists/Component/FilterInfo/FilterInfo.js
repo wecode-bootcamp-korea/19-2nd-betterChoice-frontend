@@ -15,7 +15,7 @@ const FilterInfo = ({
         {FILTER_CATEGORY.map((category, index) => {
           return (
             <FilterCategory
-              name={index}
+              value={index}
               key={index}
               color={categoryActiveTab === index}
               onClick={activeTabHandler}
@@ -62,12 +62,11 @@ const FilterCategory = styled.li`
 `;
 
 const SearchResult = styled.span`
-  margin-right: 220px;
+  margin-right: 230px;
   font-size: ${({ theme }) => theme.fontSizeMedium};
   font-weight: ${({ theme }) => theme.fontWeightBold};
   color: #333;
   span {
-    padding-left: 70px;
     font-size: calc(${({ theme }) => theme.fontSizeLarge}*1.2);
   }
 `;
