@@ -27,7 +27,7 @@ const RoomLists = () => {
   }, []);
 
   const activeTabHandler = e => {
-    setCategoryActiveTab(+e.target.getAttribute('name'));
+    setCategoryActiveTab(+e.target.value);
   };
 
   const starActiveTabHandler = e => {
@@ -36,12 +36,13 @@ const RoomLists = () => {
 
   useEffect(() => {
     const queryObject = stringToQuery(location.search);
+    console.log(location.search);
     const newObj = {
       sort_type: SORTING_CATEGORY[categoryActiveTab],
       star: STAR[starActiveTab],
     };
-    const query = queryToString({ ...queryObject, ...newObj });
-    history.push(`/roomlists${query}`);
+    const queryId = queryToString({ ...queryObject, ...newObj });
+    history.push(`/roomlists${queryId}`);
   }, [categoryActiveTab, starActiveTab]);
 
   useEffect(() => {
@@ -75,15 +76,14 @@ const STAR = ['5', '4', '3', '2', '1'];
 const SORTING_CATEGORY = ['1', '2', '3', '4'];
 
 const RoomlistsWrapper = styled.div`
+  border: 3px solid orange;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
 `;
 const ListsWrapper = styled.div`
   display: flex;
-  margin-left: 250px;
 `;
 
-const RoomInfoWrap = styled.div`
-  width: 800px;
-`;
+const RoomInfoWrap = styled.div``;

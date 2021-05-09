@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { withRouter, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { queryToString } from '../../utils/queryString';
 import moment from 'moment';
 import AccomodationType from './Component/AccomodationType/AccomodationType';
-import { queryToString } from '../../utils/queryString';
 import Location from './Component/Location/Location';
 import Calendar from '../../Components/Calendar/Calendar';
 import CountGuest from '../../Components/CountGuest/CountGuest';
@@ -124,7 +124,7 @@ const Main = () => {
   );
 };
 
-export default withRouter(Main);
+export default Main;
 
 const MIN_ADULT_NUM = 1;
 const MAX_ADULT_NUM = 4;
@@ -178,20 +178,21 @@ const SearchBtn = styled.div`
 const RoomTypeWrap = styled.section`
   display: flex;
   flex-direction: column;
-  margin: 30px 50px;
+  align-items: center;
 `;
 
 const SecondHeader = styled.header`
-  padding: 10px 270px;
-  margin-bottom: 30px;
-  font-size: 2rem;
+  width: 1240px;
+  margin: 50px 0;
+  font-size: 2.3rem;
   font-weight: 600;
   color: ${({ theme }) => theme.black};
 `;
 
 const ImageBox = styled.div`
-  ${({ theme }) => theme.flexCenter};
-  padding: 10px 50px;
+  width: 1240px;
+  display: flex;
+  padding: 30px 0;
 `;
 
 const MainType = styled.div`

@@ -1,5 +1,5 @@
 import { React } from 'react';
-import { withRouter, useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { queryToString } from '../../../../utils/queryString';
 import moment from 'moment';
 import StatusLabel from '../StatusLabel/StatusLabel';
@@ -111,7 +111,7 @@ const RoomInfo = ({ roomInfoArr }) => {
   );
 };
 
-export default withRouter(RoomInfo);
+export default RoomInfo;
 
 const Wrapper = styled.section`
   width: 1000px;

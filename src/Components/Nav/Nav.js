@@ -83,7 +83,7 @@ const Wrapper = styled.section`
 const Icons = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 15px 320px;
+  margin: 15px 230px;
 `;
 
 const Logo = styled.div`
